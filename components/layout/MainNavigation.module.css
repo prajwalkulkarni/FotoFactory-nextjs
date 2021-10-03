@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0 10%;
+  border-bottom:solid #ccc 1px;
+  position: fixed;
+  top:0;
+  
+}
+
+@font-face{
+  font-family: "BillaBong";
+  src: url("../assets//FontsFree-Net-Billabong.ttf") format("truetype");
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-family: 'BillaBong';
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.header li {
+  margin-left: 3rem;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: #861657;
+  /* background-image: linear-gradient(326deg, #6d1046 0%, #fc897f 74%); */
+}
