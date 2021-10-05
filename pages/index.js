@@ -1,11 +1,17 @@
 import { MongoClient } from 'mongodb'
 import PostList from '../components/posts/PostList'
-
+import Head from 'next/head'
+import { Fragment } from 'react'
 
 export default function HomePage(props){
     
     return(
-        <PostList posts={props.posts}/>
+        <Fragment>
+            <Head>
+                <title>Foto factory</title>
+            </Head>
+            <PostList posts={props.posts}/>
+        </Fragment>
     )
 
 }
