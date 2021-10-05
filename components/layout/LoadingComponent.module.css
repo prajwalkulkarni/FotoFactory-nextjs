@@ -1,0 +1,49 @@
+.backdrop{
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    overflow:hidden
+}
+
+.overlay{
+    position: absolute;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingSpinner{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-left: 10px solid black;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+    animation: rotate 1s 0.1s infinite linear forwards;
+
+}
+
+
+@keyframes rotate {
+
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+    
+}
