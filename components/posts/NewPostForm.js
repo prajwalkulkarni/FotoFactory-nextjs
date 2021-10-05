@@ -21,16 +21,16 @@ function NewPostForm(props) {
   }
   function submitHandler(event) {
     event.preventDefault();
-
+    props.onUploadBegin()
     if(!formIsValid){
       return;
     }
     const storageRef = ref(storage,'fotofactory/'+image.files[0].name)
     uploadBytes(storageRef,image.files[0]).then((snapshot)=>{
-      // console.log(snapshot)
+      
       
       getDownloadURL(ref(storageRef)).then(url=>{
-        // console.log("WTFFF")
+      
         const meetupData = {
           title: inputTitleValue,
           image: url,
