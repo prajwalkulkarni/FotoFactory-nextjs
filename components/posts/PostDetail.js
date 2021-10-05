@@ -32,13 +32,13 @@ export default function PostDetail(props){
             </div>
 
             <div className={classes.contentContainer}>
-                <h2>{props.title}</h2>
+                <h2 style={{paddingLeft:10}}>{props.title}</h2>
                 <hr style={{ background: 'black', color: 'black', margin: 0 }} />
                 <div className={classes.scrollable}>
-                    <p>{props.caption}</p>
+                    <p style={{paddingLeft:10}}>{props.caption}</p>
                     <hr style={{ background: 'black', color: 'black', margin: 0 }} />
                     <div className={classes.comments}>
-                        {comments.length>0?comments.map(comment=><p key={props.id}>{comment}</p>):<h1>No comments yet</h1>}
+                        {comments.length>0?comments.map(comment=><p style={{paddingLeft:10}}  key={props.id}>{comment}</p>):<h1>No comments yet</h1>}
 
                     </div>
 
@@ -50,7 +50,7 @@ export default function PostDetail(props){
                     
                     <Input
                         id="comment"
-
+                        style={{width:'90%',marginLeft:'10px',marginRight:'10px'}}
                         placeholder='Type something...'
                         endAdornment={
                             <IconButton aria-label="send" type='submit'>
