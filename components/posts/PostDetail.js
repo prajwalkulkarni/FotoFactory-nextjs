@@ -1,9 +1,9 @@
 import classes from './PostDetail.module.css'
 import React, { useEffect, useState } from 'react';
-import Input from '@material-ui/core/input'
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
 import Head from 'next/head'
 import SendIcon from '@mui/icons-material/Send';
-import { IconButton } from '@material-ui/core';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
