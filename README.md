@@ -1,6 +1,6 @@
 # FotoFactory - Photo sharing site
 
-A photo sharing app with minimalistic features. <br/>
+A statically generated photo sharing app with minimalistic features. <br/>
 
 ## Technologies used
 <ul>
