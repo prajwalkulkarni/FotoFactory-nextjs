@@ -66,7 +66,7 @@
   z-index: -1;
 }
 
-.actions button:hover::before {
+.actions button:hover:not(:disabled):before {
   transform: translateX(0%);
 }
 

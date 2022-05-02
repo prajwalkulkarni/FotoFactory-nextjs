@@ -61,7 +61,7 @@ export default function PostDetail(props){
                         <p style={{ paddingLeft: 10 }}>{props.caption}</p>
                         <hr style={{ background: 'black', color: 'black', margin: 0 }} />
                         <div className={classes.comments}>
-                            {comments.comments.length > 0 ? comments.comments.map(comment => <p style={classes.comment} key={props.id}>{comment}</p>) : <h1 className={classes.placeholder}>No comments yet</h1>}
+                            {comments.comments.length > 0 ? comments.comments.map(comment => <p className={classes.comment} key={Math.random()}>{comment}</p>) : <h1 className={classes.placeholder}>No comments yet</h1>}
                             {comments.addingComment&&<Box sx={{ display: 'flex',justifyContent:'center',padding:'5px' }}><CircularProgress /></Box>}
                         </div>
 
