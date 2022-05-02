@@ -48,9 +48,22 @@
     justify-content: space-between;
 }
 
-
+.comment{
+    padding:0.2rem;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin:5px;
+}
 .commentAdder{
     padding-bottom: 5px;
+}
+
+.placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width:800px) {

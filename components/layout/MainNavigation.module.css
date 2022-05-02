@@ -40,13 +40,31 @@
 .header a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #000000;
+  color: #777777;
+  position: relative;
+}
+
+.header a::before{
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width: 20%;
+  height: 100%;
+  border-bottom: 2px solid black;
+  transition: width 0.5s ease-out;
+}
+
+.header a:hover::before,
+.header a:active::before,
+.header a:focus::before {
+  width: 100%;
 }
 
 .header a:hover,
 .header a:active,
-.header a.active {
-  color: #861657;
+.header a:focus{
+  color: #000000;
   /* background-image: linear-gradient(326deg, #6d1046 0%, #fc897f 74%); */
 }
 

@@ -10,10 +10,10 @@ try{
 }
 catch(error){
   const firebaseConfig = {
-    apiKey: 'AIzaSyDcb3mc4y-nu5eBB96_lt5s-z7iQxlODgs',
-    authDomain: 'todo-a1752.firebaseapp.com',
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
   //   databaseURL: '<your-database-url>',
-    storageBucket: 'todo-a1752.appspot.com'
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET
   };
   fireapp = initializeApp(firebaseConfig); 
 }

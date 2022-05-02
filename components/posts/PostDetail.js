@@ -23,9 +23,9 @@ export default function PostDetail(props){
         
         setCommentProps({...comments,addingComment:true})
         props.onAddComment(e.target.comment.value).then(res=>{
-            setCommentProps({...comments,currVal:''})
-            setCommentProps({...comments,addingComment:false})
-            setCommentProps({...comments,comments:[...comments.comments,e.target.comment.value]})    
+            setCommentProps({...comments,currVal:'',addingComment:false,comments:[...comments.comments,e.target.comment.value]})
+            // setCommentProps({...comments,addingComment:false})
+            // setCommentProps({...comments,comments:[...comments.comments,e.target.comment.value]})    
         }).catch(err=>{
             setCommentProps({...comments,addingComment:false})
             alert(err)
@@ -61,7 +61,7 @@ export default function PostDetail(props){
                         <p style={{ paddingLeft: 10 }}>{props.caption}</p>
                         <hr style={{ background: 'black', color: 'black', margin: 0 }} />
                         <div className={classes.comments}>
-                            {comments.comments.length > 0 ? comments.comments.map(comment => <p style={{ paddingLeft: 10 }} key={props.id}>{comment}</p>) : <h1>No comments yet</h1>}
+                            {comments.comments.length > 0 ? comments.comments.map(comment => <p style={classes.comment} key={props.id}>{comment}</p>) : <h1 className={classes.placeholder}>No comments yet</h1>}
                             {comments.addingComment&&<Box sx={{ display: 'flex',justifyContent:'center',padding:'5px' }}><CircularProgress /></Box>}
                         </div>
 
